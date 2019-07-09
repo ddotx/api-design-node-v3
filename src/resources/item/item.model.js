@@ -30,6 +30,7 @@ const itemSchema = new mongoose.Schema(
   { timestamps: true }
 )
 
+//TODO: Compound Index
 itemSchema.index({ list: 1, name: 1 }, { unique: true })
 
 export const Item = mongoose.model('item', itemSchema)

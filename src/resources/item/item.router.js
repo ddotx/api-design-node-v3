@@ -6,6 +6,9 @@ const router = Router()
 // /api/item
 router
   .route('/')
+  // .get((req,res,next)=>{
+  //   res.status(404).json({message:'hello'})
+  // })
   .get(controllers.getOne)
   .post(controllers.createOne)
 

@@ -1,3 +1,5 @@
+//TODO=== Generic Controller
+
 export const getOne = model => async (req, res) => {
   try {
     const doc = await model
@@ -34,6 +36,8 @@ export const createOne = model => async (req, res) => {
   const createdBy = req.user._id
   try {
     const doc = await model.create({ ...req.body, createdBy })
+    //* ... => Object Spread = extend({},{},{})
+
     res.status(201).json({ data: doc })
   } catch (e) {
     console.error(e)
@@ -84,6 +88,7 @@ export const removeOne = model => async (req, res) => {
   }
 }
 
+//TODO=== Export for Controller
 export const crudControllers = model => ({
   removeOne: removeOne(model),
   updateOne: updateOne(model),

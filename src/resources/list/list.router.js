@@ -3,6 +3,8 @@ import controllers from './list.controllers'
 
 const router = Router()
 
+//TODO=== Simplify with Router Verb Methods
+
 // /api/list
 router
   .route('/')

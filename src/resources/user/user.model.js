@@ -63,4 +63,5 @@ userSchema.methods.checkPassword = function(password) {
   })
 }
 
+//TODO: Create schema that used to create the model that exposed via the API | controllers have to use the models to query and perform CRUD on the models ==> REST API
 export const User = mongoose.model('user', userSchema)

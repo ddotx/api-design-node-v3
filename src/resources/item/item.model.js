@@ -5,7 +5,7 @@ const itemSchema = new mongoose.Schema(
         name:{
             type: String,
             required: true,
-            trim: true,
+            trim: true, //? trim the space
             maxlength: 50
         },
         status:{
@@ -30,7 +30,7 @@ const itemSchema = new mongoose.Schema(
     { timestamps: true }
 )
 
-//TODO - Compound Index
+//TODO - Compound Index ==> want to be unique per list (ensure all tasks in a list have unique names)
 itemSchema.index({ list: 1, name: 1}, {unique: true})
 
 export const Item = mongoose.model('item', itemSchema)

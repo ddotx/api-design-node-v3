@@ -21,6 +21,11 @@ app.use('/api/user', userRouter)
 app.use('/api/item', itemRouter)
 app.use('/api/list', listRouter)
 
+// app.get('/', (req,res)=>{
+//   res.status(404).json({message: 'hello'})
+//TODO- do Webhook
+// })
+
 export const start = async () => {
   try {
     await connect()

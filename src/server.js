@@ -36,7 +36,7 @@ app.use('/api',router)
 
 //TODO === CRUD
 app.get('/',(req,res)=>{ //?==> controller function
-    res.send({message: 'get test'})
+    res.status(202).json({message: 'get test'})
 })
 
 app.post('/', (req, res) => {
